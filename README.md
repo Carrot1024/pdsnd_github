@@ -14,5 +14,5 @@ new_york_city.csv
 HSY  Homewark 20231129.py
 
 ### Installation Requirements
-To run or contribute to development, you need to install Python 3.0 and at least one editor you like.
+To run as user or contribute to development, you need to install Python 3.0 and at least one editor you like.
 
