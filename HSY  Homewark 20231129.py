@@ -18,7 +18,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     month_list = ['january','february','march','april','may','june','all']
     week_day_list = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday','all']
     while True:
@@ -32,7 +32,7 @@ def get_filters():
                print('Please confirm your input\n')
         except ValueError:
             print('Please confirm your input\n')
-    # TO DO: get user input for month (all, january, february, ... , june)
+    # get user input for month (all, january, february, ... , june)
     while True:
         
         try:
@@ -45,7 +45,7 @@ def get_filters():
         except ValueError:
             print('Please confirm your input\n')
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         
         try:
@@ -109,15 +109,15 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
+    # display the most common month
     popular_month = df['Start Time Month'].mode()[0]
     print('the most common month:', popular_month)
     
-    # TO DO: display the most common day of week
+    # display the most common day of week
     popular_weekday = df['Start Time weekday'].mode()[0]+1
     print('the most common day of week:', popular_weekday)
 
-    # TO DO: display the most common start hour
+    # display the most common start hour
     popular_hour = df['Start hour'].mode()[0]
     print('the most common start hour:', popular_hour)
 
@@ -131,17 +131,17 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
+    # display most commonly used start station
     start_station_counts = df.value_counts(df['Start Station'])
     popular_start_station = start_station_counts.head(1)
     print('the most commonly used start station is:\n',popular_start_station)
     
-    # TO DO: display most commonly used end station
+    # display most commonly used end station
     end_station_counts = df.value_counts(df['End Station'])
     popular_end_station = end_station_counts.head(1)
     print('the most commonly used end station is:\n',popular_end_station)
 
-    # TO DO: display most frequent combination of start station and end station trip
+    # display most frequent combination of start station and end station trip
     start_and_end_station = df['Start Station'].append(df['End Station'])
     start_and_end_station_counts = start_and_end_station.value_counts()
     popular_start_and_end_station = start_and_end_station_counts.head(1)
@@ -157,11 +157,11 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # display total travel time
     total_travel_time = sum(df['Trip Duration'])
     print('total travel time:\n',total_travel_time/60,'mins')
 
-    # TO DO: display mean travel time
+    # display mean travel time
     average_travel_time = np.mean(df['Trip Duration'])
     print('mean travel time:\n',average_travel_time)
     print('mean travel time:\n',average_travel_time/60,'mins')
@@ -175,11 +175,11 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
+    # Display counts of user types
     user_types_count = df['User Type'].value_counts()
     print('count of user types:\n',user_types_count)
     
-    # TO DO: Display counts of gender
+    # Display counts of gender
     gender_count = df['Gender'].value_counts()
     print('count of gender:\n',gender_count)   
 
