@@ -5,7 +5,7 @@
 pdsnd_github_Bikeshare
 
 ### Description
-This is a Python program that interacts with users and analyzes Bikeshare data based on Python logic.
+This is a Python program that can interacts with users and analyzes Bikeshare data based on Python logic.
 
 ### Files used
 chicago.csv
